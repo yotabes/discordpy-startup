@@ -150,6 +150,20 @@ def bukkeneki(b):
 async def bs(ctx,arg):
     await ctx.send(bukkeneki(arg))
 
+def dokusen(c):
+    count = 0
+    i = 0
+    reans =[]
+    while count < 15 or i > 339:
+        if c > aa[339-i][1]:
+            ans = aa[399-i][0] + '独占購入額' + str(aa[399-i][1]) + '万円 独占時収益' + str(aa[399-i][2]) + '万円'
+	    reans.append(ans)
+            count += 1
+        i += 1
+    return reans
 
+@bot.command()
+async def ds(ctx,arg):
+    await ctx.send(dokusen(int(arg)))
                    
 bot.run(token)
