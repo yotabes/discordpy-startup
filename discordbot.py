@@ -153,17 +153,17 @@ async def bs(ctx,arg):
 def dokusen(ctx,c):
     count = 0
     i = 0
-    reans = []
+    reans = ""
     while count < 15 and i < 339:
         if c > aa[339-i][1]:
             ans = aa[339-i][0] + '独占購入額' + str(aa[339-i][1]) + '万円 独占時収益' + str(aa[339-i][2]) + '万円'
             count += 1
-            reans.append(ans)
+            reans = reans + ans\n
         i += 1
     return reans
 
 @bot.command()
 async def ds(ctx,arg):
-    await dokusen(ctx,int(arg))
+    await ctx.send(dokusen(ctx,int(arg)))
                    
 bot.run(token)
