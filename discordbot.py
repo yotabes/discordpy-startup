@@ -153,7 +153,6 @@ async def bs(ctx,arg):
 def dokusen(ctx,c):
     count = 0
     i = 0
-    reans = ""
     while count < 15 and i < 339:
         if c > aa[339-i][1]:
             ans = aa[339-i][0] + '独占購入額' + str(aa[339-i][1]) + '万円 独占時収益' + str(aa[339-i][2]) + '万円'
