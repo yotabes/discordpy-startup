@@ -436,6 +436,6 @@ async def bs(ctx,arg):
 
 @bot.command()
 async def ds(ctx,arg):
-    await dokusen(arg)
+    await dokusen(int(arg))
                    
 bot.run(token)
