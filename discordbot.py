@@ -144,7 +144,7 @@ def bukkeneki(b):
     for i in range(len(aa)):
         if b == aa[i][0]:
             ans = [aa[i][0],'独占購入額',aa[i][1],'万円　独占時収益',aa[i][2],'万円']
-	    return ans
+    return ans
 
 @bot.command()
 async def bs(ctx,arg):
