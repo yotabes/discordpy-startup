@@ -156,7 +156,7 @@ def dokusen(ctx,c):
     reans = []
     while count < 15 and i < 339:
         if c > aa[339-i][1]:
-            ans = aa[339-i][0] + '独占購入額' + str(aa[339-i][1]) + '万円 独占時収益' + str(aa[339-i][2]) + '万円\n'
+            ans = aa[339-i][0] + '独占購入額' + str(aa[339-i][1]) + '万円 独占時収益' + str(aa[339-i][2]) + '万円'
             count += 1
             reans.append(ans)
         i += 1
