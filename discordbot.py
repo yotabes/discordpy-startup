@@ -399,7 +399,7 @@ for i in range(len(a)):
 def bukkeneki(ctx,b):
     for i in range(len(a)):
         if b == a[i][0]:
-            ans = 'a[i][0],'独占購入額',a[i][1],'万円　独占時収益',a[i][2],'万円''
+            ans = "a[i][0],'独占購入額',a[i][1],'万円　独占時収益',a[i][2],'万円'"
 	    ctx.send(ans)
 
 def dokusen(ctx,c):
@@ -407,7 +407,7 @@ def dokusen(ctx,c):
     i = 0
     while count < 15 or i > 339:
         if c > a[339-i][1]:
-            ans ='a[339-i][0],'独占購入額',a[339-i][1],'万円　独占時収益',a[339-i][2],'万円''
+            ans ="a[339-i][0],'独占購入額',a[339-i][1],'万円　独占時収益',a[339-i][2],'万円'"
 	    ctx.send(ans)
             count += 1
         i += 1
