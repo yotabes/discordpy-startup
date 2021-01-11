@@ -143,7 +143,7 @@ aa = [['--', 0, 0], ['土浦', 32000, 2100], ['小城', 5000, 2500], ['名寄', 
 def bukkeneki(b):
     for i in range(len(aa)):
         if b == aa[i][0]:
-            ans = [aa[i][0],'独占購入額',aa[i][1],'万円　独占時収益',aa[i][2],'万円']
+            ans = "aa[i][0],'独占購入額',aa[i][1],'万円　独占時収益',aa[i][2],'万円'"
     return ans
 
 @bot.command()
