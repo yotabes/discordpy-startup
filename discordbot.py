@@ -399,8 +399,7 @@ for i in range(len(a)):
 def bukkeneki(b):
     for i in range(len(a)):
         if b == a[i][0]:
-            ans =[a[i][0],'独占購入額',a[i][1],'万円　独占時収益',a[i][2],'万円']
-            return ans
+            await ctx.send(a[i][0],'独占購入額',a[i][1],'万円　独占時収益',a[i][2],'万円')
 
 def dokusen(c):
     count = 0
@@ -432,7 +431,7 @@ async def cs(ctx,arg):
 
 @bot.command()
 async def bs(ctx,arg):
-    await ctx.send(bukkeneki(arg)
+    await bukkeneki(arg)
 
 @bot.command()
 async def ds(ctx,arg):
