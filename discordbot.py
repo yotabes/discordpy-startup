@@ -396,21 +396,23 @@ for i in range(len(a)):
     a[i][1]=int(a[i][1])
     a[i][2]=int(a[i][2])
 
-def bukkeneki(ctx,b):
+def bukkeneki(b):
     for i in range(len(a)):
         if b == a[i][0]:
             ans = [a[i][0],'独占購入額',a[i][1],'万円　独占時収益',a[i][2],'万円']
-	    ctx.send(ans)
+	    return ans
 
-def dokusen(ctx,c):
+def dokusen(c):
     count = 0
     i = 0
+    reans =[]
     while count < 15 or i > 339:
         if c > a[339-i][1]:
             ans =[a[339-i][0],'独占購入額',a[339-i][1],'万円　独占時収益',a[339-i][2],'万円']
-	    ctx.send(ans)
+	    reans.append(ans)
             count += 1
         i += 1
+    return reans
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -433,10 +435,10 @@ async def cs(ctx,arg):
 
 @bot.command()
 async def bs(ctx,arg):
-    await bukkeneki(ctx,arg)
+    await ctx.send(bukkeneki(arg))
 
 @bot.command()
-async def ds(ctx,arg):
-    await dokusen(ctx,int(arg))
+async def ds(arg):
+    await dokusen(int(arg))
                    
 bot.run(token)
